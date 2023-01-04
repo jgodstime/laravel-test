@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
+     public function menus()
+    {
+       return $this->hasMany(MenuItem::class);
+    }
 
+    public function children()
+    {
+       return $this->hasMany(MenuItem::class)->with('menus');
+    }
 }

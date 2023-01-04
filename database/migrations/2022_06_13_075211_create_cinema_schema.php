@@ -18,6 +18,38 @@ class CreateCinemaSchema extends Migration
      **Movie exploration**
      * As a user I want to see which films can be watched and at what times
      * As a user I want to only see the shows which are not booked out
+     *
+     *
+
+     movies
+     title
+     amount
+
+
+     movie_times
+     show_room_id
+     movie_id
+     times (json) {
+        time:34,
+        is_booked:true
+     }
+
+     show_rooms
+     id
+     title
+
+
+     seats
+     title
+     percentage
+
+
+
+     bookings
+     user_id
+     
+
+
 
      **Show administration**
      * As a cinema owner I want to run different films at different times
